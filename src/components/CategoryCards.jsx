@@ -17,11 +17,10 @@ const CategoryCards = () => {
     autoplay: true,
     autoplaySpeed: 3500,
     pauseOnHover: true,
-    touch: true,
+    adaptiveHeight: true,
     swipeToSlide: true,
-    touchThreshold: 10,
-    swipe: true,
-    draggable: true,
+    touchThreshold: 15,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -35,6 +34,15 @@ const CategoryCards = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],

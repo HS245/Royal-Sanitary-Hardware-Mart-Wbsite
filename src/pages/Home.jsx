@@ -56,16 +56,22 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    touch: true,
+    adaptiveHeight: true,
     swipeToSlide: true,
-    touchThreshold: 10,
-    swipe: true,
-    draggable: true,
+    touchThreshold: 15,
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -74,13 +80,15 @@ const Home = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 520,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -97,12 +105,18 @@ const Home = () => {
     pauseOnHover: true,
     pauseOnFocus: true,
     pauseOnDotsHover: true,
-    touch: true,
+    adaptiveHeight: true,
     swipeToSlide: true,
-    touchThreshold: 10,
-    swipe: true,
-    draggable: true,
+    touchThreshold: 15,
+    arrows: true,
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -115,6 +129,15 @@ const Home = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -130,11 +153,6 @@ const Home = () => {
     autoplaySpeed: 3500,
     pauseOnHover: true,
     arrows: false,
-    touch: true,
-    swipeToSlide: true,
-    touchThreshold: 10,
-    swipe: true,
-    draggable: true,
   };
 
   const features = [

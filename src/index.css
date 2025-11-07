@@ -534,20 +534,13 @@ img {
 .category-card h3 {
   margin-bottom: 15px;
   color: var(--white);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
+  word-break: break-word;
 }
 
 .category-card p {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  line-height: 1.4;
 }
 
 .category-overlay {
@@ -794,19 +787,13 @@ img {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .product-name {
   font-size: 1.25rem;
   margin-bottom: 12px;
   color: var(--white);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
+  word-break: break-word;
 }
 
 .product-description {
@@ -814,12 +801,11 @@ img {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 15px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  line-height: 1.5;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  word-wrap: break-word;
-  word-break: break-word;
-  line-height: 1.5;
 }
 
 .product-features {
@@ -1737,11 +1723,16 @@ img {
   }
 
   .brand-card {
-    padding: 30px 20px;
+    padding: 24px 18px;
   }
 
   .brand-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .brand-card p {
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 
   /* Categories carousel mobile */
@@ -1751,21 +1742,104 @@ img {
   }
 
   .category-card {
-    padding: 30px 20px;
+    padding: 24px 18px;
   }
 
   .category-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .category-card p {
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 
   .category-icon {
     font-size: 2.5rem;
   }
 
+  .category-items li {
+    font-size: 0.75rem;
+  }
+
   /* Products carousel mobile */
   .product-catalog .slick-prev,
   .product-catalog .slick-next {
     display: none !important;
+  }
+
+  /* Force one full-width slide on mobile */
+  .brands-section .slick-track,
+  .categories-section .slick-track,
+  .product-catalog .slick-track {
+    display: flex;
+  }
+
+  .brands-section .slick-slide,
+  .categories-section .slick-slide,
+  .product-catalog .slick-slide {
+    width: 100% !important;
+  }
+
+  /* Tighter mobile text sizing to avoid vertical stacking */
+  .brand-card h3,
+  .category-card h3,
+  .product-name {
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .brand-card p,
+  .category-card p,
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .brands-section .slick-list,
+  .categories-section .slick-list,
+  .product-catalog .slick-list {
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  .brands-section .slick-slide,
+  .categories-section .slick-slide,
+  .product-catalog .slick-slide {
+    padding: 0;
+  }
+
+  .brand-card,
+  .category-card,
+  .product-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .brand-card h3,
+  .category-card h3,
+  .product-name {
+    white-space: normal;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .product-description {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+  }
+
+  .product-description {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
   }
 }
 
@@ -1795,6 +1869,18 @@ img {
     height: 45px;
     bottom: 20px;
     right: 20px;
+  }
+
+  /* Extra-tight typography for very small devices */
+  .brand-card h3,
+  .category-card h3,
+  .product-name {
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+
+  .brand-logo {
+    height: 50px;
   }
 
   .container {
@@ -1838,57 +1924,7 @@ img {
   }
 
   .hero-service-image {
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 420px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-  h2 {
-    font-size: 1.35rem;
-  }
-  h3 {
-    font-size: 1.15rem;
-  }
-
-  .hero-text h1 {
-    font-size: 1.75rem;
-  }
-
-  .cta-content h2 {
-    font-size: 1.75rem;
-  }
-
-  .section-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .product-name {
-    font-size: 1.1rem;
-  }
-
-  .brand-card h3 {
-    font-size: 1rem;
-  }
-
-  .category-card h3 {
-    font-size: 1rem;
-  }
-
-  .container {
-    padding: 0 12px;
-  }
-
-  .hero-service-image {
-    max-width: 240px;
-  }
-
-  .brand-card,
-  .category-card {
-    min-height: 290px;
-    padding: 24px 14px;
+    max-width: 350px;
   }
 }
 
@@ -2052,20 +2088,13 @@ img {
   font-size: 1.5rem;
   color: var(--white);
   margin-bottom: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
+  word-break: break-word;
 }
 
 .brand-card p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
+  line-height: 1.4;
 }
 
 /* Slick Carousel Customization */
@@ -2244,6 +2273,19 @@ img {
   color: var(--gold-color);
 }
 
+.brands-section .slick-slider,
+.categories-section .slick-slider,
+.product-catalog .slick-slider {
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.brands-section .slick-slide > div,
+.categories-section .slick-slide > div,
+.product-catalog .slick-slide > div {
+  height: 100%;
+}
+
 /* Update product card for brand display */
 .product-brand {
   display: inline-block;
@@ -2263,54 +2305,4 @@ img {
   color: var(--grey);
   margin-bottom: 10px;
   font-family: monospace;
-}
-
-/* Mobile Carousel Touch Optimizations */
-@media (max-width: 768px) {
-  .slick-list {
-    overflow: visible !important;
-    padding: 0 !important;
-  }
-
-  .slick-slide {
-    padding: 0 6px !important;
-  }
-
-  .slick-track {
-    display: flex !important;
-    align-items: stretch;
-  }
-
-  .product-card,
-  .brand-card,
-  .category-card {
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  .product-catalog .slick-prev,
-  .product-catalog .slick-next,
-  .brands-section .slick-prev,
-  .brands-section .slick-next {
-    display: none !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .slick-slide {
-    padding: 0 4px !important;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-
-  .product-info {
-    padding: 20px 15px;
-  }
-
-  .brand-card,
-  .category-card {
-    padding: 20px 12px;
-  }
 }

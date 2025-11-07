@@ -1,12 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import { ShaderAnimation } from "@/components/ui/shader-animation";
+
+// Route-level code splitting
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+
+// Split heavy three.js shader off the main chunk
+const ShaderAnimation = lazy(() =>
+  import("@/components/ui/shader-animation").then((m) => ({
+    default: m.ShaderAnimation,
+  }))
+);
 
 function App() {
   useEffect(() => {
@@ -17,18 +25,22 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Global shader background */}
-        <ShaderAnimation
-          className="fixed inset-0 -z-10 pointer-events-none"
-          opacity={1.0}
-        />
+        {/* Global shader background (lazy) */}
+        <Suspense fallback={null}>
+          <ShaderAnimation
+            className="fixed inset-0 -z-10 pointer-events-none"
+            opacity={1.0}
+          />
+        </Suspense>
         <Navbar />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={<div style={{ height: 200 }} /> }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <ScrollToTop />
