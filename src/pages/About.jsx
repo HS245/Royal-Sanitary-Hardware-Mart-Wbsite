@@ -29,6 +29,11 @@ const About = () => {
     autoplaySpeed: 3500,
     pauseOnHover: true,
     arrows: false,
+    touch: true,
+    swipeToSlide: true,
+    touchThreshold: 10,
+    swipe: true,
+    draggable: true,
   };
 
   const values = [

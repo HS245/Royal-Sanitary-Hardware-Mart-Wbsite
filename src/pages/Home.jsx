@@ -56,6 +56,11 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    touch: true,
+    swipeToSlide: true,
+    touchThreshold: 10,
+    swipe: true,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -67,7 +72,7 @@ const Home = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -92,6 +97,11 @@ const Home = () => {
     pauseOnHover: true,
     pauseOnFocus: true,
     pauseOnDotsHover: true,
+    touch: true,
+    swipeToSlide: true,
+    touchThreshold: 10,
+    swipe: true,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -120,6 +130,11 @@ const Home = () => {
     autoplaySpeed: 3500,
     pauseOnHover: true,
     arrows: false,
+    touch: true,
+    swipeToSlide: true,
+    touchThreshold: 10,
+    swipe: true,
+    draggable: true,
   };
 
   const features = [
