@@ -5,12 +5,14 @@ A luxury e-commerce website showcasing premium bathroom fittings, sanitary ware,
 ## 🌟 Features
 
 ### ✨ **Premium Design System**
+
 - Dark theme with golden accents (#d4af37)
 - Global WebGL shader background using Three.js
 - Elegant typography using Playfair Display and Poppins fonts
 - Sophisticated glassmorphism UI effects
 
 ### 🎨 **Animations & Effects**
+
 - Custom WebGL shader background with animated color patterns
 - Framer Motion powered smooth animations
 - Auto-sliding carousels for brands, categories, and products
@@ -19,12 +21,14 @@ A luxury e-commerce website showcasing premium bathroom fittings, sanitary ware,
 - Parallax scroll effects on store info section
 
 ### 📱 **Fully Responsive**
+
 - Mobile-first design approach (optimized for devices down to 320px)
 - Adaptive layouts for all screen sizes (1024px, 768px, 480px, 420px breakpoints)
 - Touch-friendly carousels with swipe gestures
 - Optimized performance for mobile devices
 
 ### 🏪 **Business Features**
+
 - Authorized dealer showcase for 4 premium brands:
   - Hindware (Sanitary Ware & CP Fittings)
   - Jaquar (Luxury Fittings)
@@ -36,6 +40,7 @@ A luxury e-commerce website showcasing premium bathroom fittings, sanitary ware,
 - Developer attribution in footer
 
 ### 📄 **Pages**
+
 - **Home**: Hero section, authorized dealers, categories, featured products, services, and CTA
 - **About**: Company story with dark theme, values carousel (mobile), and statistics
 - **Contact**: Contact form with dark glassmorphism design and information cards
@@ -43,26 +48,32 @@ A luxury e-commerce website showcasing premium bathroom fittings, sanitary ware,
 ## 🚀 Tech Stack
 
 ### Core Technologies
+
 - **React 19.1.1** - Modern UI library
 - **Vite (rolldown-vite 7.1.14)** - Lightning-fast build tool
 - **React Router DOM** - Navigation and routing
 - **Framer Motion** - Animation library
+
 ### Animation & UI Libraries
+
 - **Framer Motion 12.23.24** - Advanced animations and transitions
 - **Three.js** - WebGL shader background rendering
 - **React Slick** - Carousel/slider functionality
 - **Slick Carousel** - Carousel CSS styling
 
 ### Styling
+
 - **Tailwind CSS v4** - Utility-first CSS framework
 - **CSS Variables** - Dynamic theming system
 - **Google Fonts** - Playfair Display & Poppins
 
 ### Routing & Icons
+
 - **React Router DOM 7.9.5** - Client-side routing
 - **React Icons** - Comprehensive icon library
 
 ### Development Tools
+
 - **TypeScript** - Type checking for shader component
 - **ESLint** - Code quality and consistency
 - **PostCSS** - CSS processing
@@ -131,12 +142,14 @@ royal-sanitary/
 ## 🎨 Key Features
 
 ### WebGL Shader Animation
+
 - Custom fragment shader with animated color gradients
 - Global fixed background across all pages
 - Optimized opacity (0.16) for subtle effect
 - GPU-accelerated rendering via Three.js
 
 ### Carousel Implementation
+
 - **Brands Section**: Auto-sliding showcase of 4 authorized dealers
 - **Categories Section**: Product categories with auto-play
 - **Products Section**: Featured products carousel
@@ -144,6 +157,7 @@ royal-sanitary/
 - **About Page**: Mobile-only carousels for company values and statistics
 
 All carousels feature:
+
 - Auto-play with configurable speed
 - Pause on hover
 - Infinite loop
@@ -151,6 +165,7 @@ All carousels feature:
 - Smooth slide transitions
 
 ### Responsive Design
+
 - **Desktop (>1024px)**: Full grid layouts, multi-column displays
 - **Tablet (768px-1024px)**: 2-column grids, adjusted spacing
 - **Mobile (480px-768px)**: Single column, carousels active
@@ -160,6 +175,7 @@ All carousels feature:
 ### Components
 
 #### Navbar
+
 - Sticky navigation with backdrop blur (desktop)
 - Solid background on scroll
 - Active route highlighting with golden underline
@@ -168,6 +184,7 @@ All carousels feature:
 - Auto scroll-to-top on navigation
 
 #### Hero
+
 - Responsive service images (All.png for desktop, All2.png for mobile)
 - Animated hero badge with premium branding
 - Gradient text effects on main heading
@@ -176,6 +193,7 @@ All carousels feature:
 - Framer Motion entrance animations
 
 #### Product Card
+
 - Simplified clean design without pricing
 - Brand badge display
 - Product name, model, and description
@@ -184,6 +202,7 @@ All carousels feature:
 - No cart/wishlist buttons (display-only)
 
 #### Footer
+
 - 3-column layout (Company Info, Quick Links, Contact)
 - Company logo with tagline
 - Social media links with hover effects
@@ -194,15 +213,17 @@ All carousels feature:
 ## 🏢 Business Information
 
 **Royal Sanitary & Hardware Mart**
+
 - **Established**: 2025
 - **Location**: Thana Rd, near Howly Police station, Howly, Ambari, Assam 781316
 - **Phone**: +91 6003977758
 - **Email**: royalsanitaryhowly@gmail.com
-- **Hours**: 
+- **Hours**:
   - Mon-Sat: 9:00 AM - 8:00 PM
   - Sunday: 10:00 AM - 6:00 PM
 
 ### Authorized Dealer For:
+
 1. **Hindware** - Sanitary Ware & CP Fittings
 2. **Jaquar** - Luxury Fittings
 3. **Astral Pipes** - Sanitary Ware
@@ -211,18 +232,21 @@ All carousels feature:
 ## 🎨 Design System
 
 ### Color Palette
+
 ```css
---gold-color: #d4af37;        /* Primary accent */
---primary-color: #2c3e50;     /* Text/headings */
---dark-color: #1a1a1a;        /* Backgrounds */
---white: #ffffff;             /* Text on dark */
+--gold-color: #d4af37; /* Primary accent */
+--primary-color: #2c3e50; /* Text/headings */
+--dark-color: #1a1a1a; /* Backgrounds */
+--white: #ffffff; /* Text on dark */
 ```
 
 ### Typography
+
 - **Headings**: Playfair Display (Serif)
 - **Body**: Poppins (Sans-serif)
 
 ### Shadows & Effects
+
 - Glassmorphism with `backdrop-filter: blur(10px)`
 - Golden glow shadows on hover
 - Smooth transitions (0.3s ease)
@@ -231,6 +255,7 @@ All carousels feature:
 ## 📱 Mobile Optimization
 
 ### Performance Enhancements
+
 - Disabled heavy backdrop-filter on mobile navbar
 - Optimized carousel settings for touch devices
 - Reduced padding and spacing for small screens
@@ -238,6 +263,7 @@ All carousels feature:
 - Efficient re-renders with React hooks
 
 ### Touch Interactions
+
 - Swipe gestures for carousels
 - Large touch targets (min 44x44px)
 - Smooth scroll behavior
@@ -246,6 +272,7 @@ All carousels feature:
 ## 🚀 Development
 
 ### Available Scripts
+
 ```bash
 npm run dev      # Start dev server (localhost:5174)
 npm run build    # Build for production
@@ -254,6 +281,7 @@ npm run lint     # Run ESLint
 ```
 
 ### Key Dependencies
+
 ```json
 {
   "react": "^19.1.1",
@@ -267,6 +295,7 @@ npm run lint     # Run ESLint
 ## 📄 Pages Overview
 
 ### Home Page (`/`)
+
 - Hero section with service images
 - Store information with golden parallax effect
 - Authorized dealers carousel
@@ -277,6 +306,7 @@ npm run lint     # Run ESLint
 - Visit showroom CTA
 
 ### About Page (`/about`)
+
 - Company history and mission
 - Core values (mobile carousel)
 - Statistics and achievements (mobile carousel)
@@ -284,6 +314,7 @@ npm run lint     # Run ESLint
 - Dark theme with glassmorphism
 
 ### Contact Page (`/contact`)
+
 - Contact form with validation
 - Information cards (Location, Phone, Email, Hours)
 - Dark glassmorphism design
@@ -293,12 +324,13 @@ npm run lint     # Run ESLint
 ## 👨‍💻 Developer
 
 **Hassan Shahid**
+
 - **Email**: hassanshahid245@gmail.com
 - **GitHub**: [HS245](https://github.com/HS245)
 - **LinkedIn**: [Hassan Shahid](https://www.linkedin.com/in/hassan-shahid-0991071a3)
-- **Instagram**: [@__hs__0002](https://www.instagram.com/__hs__0002/)
+- **Instagram**: [@**hs**0002](https://www.instagram.com/__hs__0002/)
 
-*Contact me for site development* 👨‍💻
+_Contact me for site development_ 👨‍💻
 
 ## 📝 License
 
@@ -316,4 +348,4 @@ This project is proprietary and belongs to Royal Sanitary & Hardware Mart.
 
 **© 2025 Royal Sanitary & Hardware Mart. All rights reserved.**
 
-*Designed with ❤️ for luxury*
+_Designed with ❤️ for luxury_
