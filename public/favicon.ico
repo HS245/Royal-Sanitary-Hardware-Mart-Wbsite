@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C0A062;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#2C3E50"/>
+  
+  <!-- Crown Icon -->
+  <path d="M 32 18 L 35 28 L 42 24 L 38 32 L 48 30 L 40 38 L 32 35 L 24 38 L 16 30 L 26 32 L 22 24 L 29 28 Z" 
+        fill="url(#grad)"/>
+  
+  <!-- Base -->
+  <rect x="18" y="36" width="28" height="4" rx="1" fill="url(#grad)"/>
+  
+  <!-- Text -->
+  <text x="32" y="52" font-family="serif" font-size="10" font-weight="bold" 
+        fill="#ffffff" text-anchor="middle">RS</text>
+</svg>

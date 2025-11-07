@@ -1,0 +1,221 @@
+{
+  "storeInfo": {
+    "name": "Royal Sanitary & Hardware Mart",
+    "established": "2025",
+    "description": "Your trusted partner for premium sanitary ware and hardware solutions",
+    "specialization": "Authorized dealer of leading brands including Hindware, Cera, Parryware, Jaquar, Kohler, and more"
+  },
+  "brands": [
+    {
+      "name": "Hindware",
+      "category": "Sanitary Ware & CP Fittings",
+      "featured": true,
+      "logo": "/Hindware Logo Vector.svg"
+    },
+    {
+      "name": "Astral Pipes",
+      "category": "Sanitary Ware",
+      "featured": true,
+      "logo": "/Astral Pipes.svg"
+    },
+    {
+      "name": "Ashirvad Pipes",
+      "category": "Bathroom Solutions",
+      "featured": true,
+      "logo": "/ashirvad-logo.svg"
+    },
+    {
+      "name": "Jaquar",
+      "category": "Luxury Fittings",
+      "featured": true,
+      "logo": "/Jqaur.svg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "sanitary-ware",
+      "name": "Sanitary Ware",
+      "description": "Complete range of EWCs, wash basins, pedestals & more",
+      "icon": "🚿",
+      "items": [
+        "Wall Hung Closets",
+        "Floor Mounted Closets",
+        "Wash Basins",
+        "Pedestals",
+        "Urinals",
+        "Cisterns"
+      ]
+    },
+    {
+      "id": "cp-fittings",
+      "name": "CP Fittings",
+      "description": "Premium chrome plated taps, mixers & shower sets",
+      "icon": "🔧",
+      "items": [
+        "Basin Mixers",
+        "Sink Mixers",
+        "Bath Fittings",
+        "Shower Systems",
+        "Wall Mixers",
+        "Pillar Taps"
+      ]
+    },
+    {
+      "id": "bath-accessories",
+      "name": "Bath Accessories",
+      "description": "Complete range of bathroom accessories",
+      "icon": "🛁",
+      "items": [
+        "Towel Rods",
+        "Soap Dishes",
+        "Paper Holders",
+        "Bottle Shelves",
+        "Mirrors",
+        "Health Faucets"
+      ]
+    },
+    {
+      "id": "hardware",
+      "name": "Hardware & Fittings",
+      "description": "Door hardware, hinges, locks & accessories",
+      "icon": "🔩",
+      "items": [
+        "Door Handles",
+        "Tower Bolts",
+        "Aldrops",
+        "Hinges",
+        "Door Stoppers",
+        "Cabinet Hardware"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Hindware Arana Wall Hung Closet",
+      "brand": "Hindware",
+      "category": "sanitary-ware",
+      "model": "ARANA-WHC",
+      "price": 19500,
+      "description": "Premium wall-hung EWC with soft-close seat. Italian design with water-saving dual flush system.",
+      "features": [
+        "Wall-hung concealed cistern",
+        "Soft-close seat & cover",
+        "Dual flush 3/6L",
+        "Nano self-clean glaze",
+        "10-year warranty"
+      ],
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Jaquar Florentine Basin Mixer",
+      "brand": "Jaquar",
+      "category": "cp-fittings",
+      "model": "FLR-CHR-35049",
+      "price": 8900,
+      "description": "Premium single lever basin mixer with ceramic disc cartridge for smooth operation.",
+      "features": [
+        "Ceramic disc cartridge",
+        "Chrome-plated brass body",
+        "360° swivel spout",
+        "Water-saving aerator",
+        "10-year warranty"
+      ],
+      "image": "https://images.unsplash.com/photo-1585264550248-1778be3b6368?w=800&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Hindware Rain Shower 12-inch",
+      "brand": "Hindware",
+      "category": "cp-fittings",
+      "model": "F470027CP",
+      "price": 15000,
+      "description": "Ultra-slim 12-inch rain shower with 3-spray patterns for luxury shower experience.",
+      "features": [
+        "12-inch (300mm) diameter",
+        "3 spray patterns",
+        "Anti-lime scale nozzles",
+        "Brass construction",
+        "Chrome finish"
+      ],
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80"
+    },
+    {
+      "id": 6,
+      "name": "Jaquar Continental Thermostatic Shower",
+      "brand": "Jaquar",
+      "category": "cp-fittings",
+      "model": "CON-THERM-8912",
+      "price": 42000,
+      "description": "Premium thermostatic shower mixer with rain shower and hand shower.",
+      "features": [
+        "Thermostatic control",
+        "10-inch overhead shower",
+        "5-function hand shower",
+        "Chrome finish",
+        "German cartridge"
+      ],
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80"
+    },
+    {
+      "id": 7,
+      "name": "Hindware Moonstone Pedestal Basin",
+      "brand": "Hindware",
+      "category": "sanitary-ware",
+      "model": "MOON-PED-5510",
+      "price": 9500,
+      "description": "Classic pedestal wash basin with full pedestal for modern bathrooms.",
+      "features": [
+        "Full pedestal design",
+        "Single tap hole",
+        "Overflow protection",
+        "Easy-clean glaze",
+        "5-year warranty"
+      ],
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80"
+    },
+    {
+      "id": 10,
+      "name": "Jaquar Towel Rod 24-inch",
+      "brand": "Jaquar",
+      "category": "bath-accessories",
+      "model": "FLR-CHR-8401",
+      "price": 3500,
+      "description": "Premium brass towel rod with elegant chrome finish for modern bathrooms.",
+      "features": [
+        "Solid brass construction",
+        "Chrome-plated finish",
+        "Wall-mounted",
+        "Corrosion resistant",
+        "5-year warranty"
+      ],
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80"
+    },
+    {
+      "id": 11,
+      "name": "Hindware Shower Enclosure",
+      "brand": "Hindware",
+      "category": "sanitary-ware",
+      "model": "SE-3SIDE-1200",
+      "price": 48000,
+      "description": "Premium 3-sided shower enclosure with 8mm tempered glass and sliding door.",
+      "features": [
+        "8mm tempered glass",
+        "3-sided enclosure",
+        "Sliding door",
+        "Chrome profiles",
+        "Easy-clean coating"
+      ],
+      "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
+    }
+  ],
+  "services": [
+    "Free Home Consultation",
+    "Expert Installation Services",
+    "After-Sales Support",
+    "Product Warranty Registration",
+    "Bulk Project Orders",
+    "Excellent Service"
+  ]
+}
