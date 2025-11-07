@@ -11,17 +11,9 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1200,
     rollupOptions: {
       output: {
-        manualChunks: {
-          "react-vendor": ["react", "react-dom"],
-          "router-vendor": ["react-router-dom"],
-          "motion-vendor": ["framer-motion"],
-          "three-vendor": ["three"],
-          "slick-vendor": ["react-slick", "slick-carousel"],
-          "icons-vendor": ["react-icons"],
-        },
+        manualChunks: undefined,
       },
     },
   },
