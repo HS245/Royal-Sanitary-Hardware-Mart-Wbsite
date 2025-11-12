@@ -7,12 +7,14 @@ type Props = {
   className?: string;
   style?: CSSProperties;
   opacity?: number;
+  duration?: number; // Animation duration in seconds
 };
 
 export function ShaderAnimation({
   className = "w-full h-screen",
   style,
   opacity = 0.25,
+  duration = 5.0, // Default 5 seconds
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<{
@@ -22,11 +24,17 @@ export function ShaderAnimation({
     uniforms: any;
     animationId: number;
   } | null>(null);
+  const startTimeRef = useRef<number | null>(null);
+  const isCompleteRef = useRef<boolean>(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     const container = containerRef.current;
+
+    // Reset animation state when component mounts (new page load/navigation)
+    startTimeRef.current = null;
+    isCompleteRef.current = false;
 
     // Vertex shader
     const vertexShader = `
@@ -67,6 +75,10 @@ export function ShaderAnimation({
     const scene = new THREE.Scene();
     const geometry = new THREE.PlaneGeometry(2, 2);
 
+    // Animation speed: original increments by 0.05 per frame
+    // At ~60fps, that's approximately 3.0 per second
+    const timeSpeed = 3.0; // Time units per second
+
     const uniforms = {
       time: { type: "f", value: 1.0 },
       resolution: { type: "v2", value: new THREE.Vector2() },
@@ -102,11 +114,33 @@ export function ShaderAnimation({
     onWindowResize();
     window.addEventListener("resize", onWindowResize, false);
 
-    // Animation loop
-    const animate = () => {
-      const animationId = requestAnimationFrame(animate);
-      uniforms.time.value += 0.05;
+    // Animation loop - plays once and stops at last frame
+    const animate = (currentTime: number) => {
+      // Initialize start time on first frame
+      if (startTimeRef.current === null) {
+        startTimeRef.current = currentTime;
+      }
+
+      // Calculate elapsed time in seconds
+      const elapsed = (currentTime - startTimeRef.current) / 1000;
+
+      if (!isCompleteRef.current) {
+        // Calculate time value based on elapsed time
+        // Start at 1.0, increment by timeSpeed per second
+        if (elapsed < duration) {
+          // Linear interpolation: start value + (speed * elapsed time)
+          uniforms.time.value = 1.0 + elapsed * timeSpeed;
+        } else {
+          // Animation complete - stop at last frame
+          uniforms.time.value = 1.0 + duration * timeSpeed;
+          isCompleteRef.current = true;
+        }
+      }
+      // Continue rendering even after animation completes to show last frame
       renderer.render(scene, camera);
+
+      // Continue animation loop
+      const animationId = requestAnimationFrame(animate);
 
       if (sceneRef.current) {
         sceneRef.current.animationId = animationId;
@@ -123,7 +157,7 @@ export function ShaderAnimation({
     };
 
     // Start animation
-    animate();
+    requestAnimationFrame(animate);
 
     // Cleanup function
     return () => {
@@ -141,7 +175,7 @@ export function ShaderAnimation({
         material.dispose();
       }
     };
-  }, []);
+  }, [duration, opacity]); // Re-run when duration or opacity changes (triggers on page navigation)
 
   return (
     <div
@@ -156,3 +190,5 @@ export function ShaderAnimation({
     />
   );
 }
+
+
